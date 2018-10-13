@@ -1,6 +1,10 @@
 DATA SEGMENT
     packed DD 12345678H
-    unpacked DD 0
+           DD 12345678H
+    unpacked DD ?
+             DD ?
+             DD ?
+             DD ?
 DATA ENDS
 
 CODE SEGMENT
@@ -10,7 +14,7 @@ start:
     MOV AX, DATA
     MOV DS, AX
     
-    MOV CX, 4
+    MOV CX, 8
     MOV SI, 0
     MOV DI, 0
     convert:
