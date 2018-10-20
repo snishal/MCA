@@ -19,17 +19,4 @@ CHIP DMux {
     And(a = NotSel, b = in, out = a);
     And(a = sel, b = in, out = b);
 
-    /*
-    	DMux must be
-		Not(in = in, out = NotIn);
-    	And(a = sel, b = NotIn, out = a);
-    	And(a = sel, b = in, out = b);
-
-    	sel in a b
-    	0	0  0 0
-    	0	1  0 0
-    	1	0  1 0
-    	1   1  0 1
-    */
-
 }
